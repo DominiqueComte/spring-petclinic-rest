@@ -15,6 +15,7 @@
  */
 package org.springframework.samples.petclinic.repository.jdbc;
 
+import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 import org.springframework.context.annotation.Profile;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -47,6 +48,7 @@ import java.util.*;
  * @author Michael Isvy
  * @author Vitaliy Fedoriv
  */
+@DependsOnDatabaseInitialization
 @Repository
 @Profile("jdbc")
 public class JdbcVisitRepositoryImpl implements VisitRepository {
